@@ -4,10 +4,8 @@ import { MessagesService } from './messages.service';
 
 @Controller('messages')
 export class MessagesController {
-    messagesService : MessagesService
-    constructor() {
-        //Don't do this in real apps. Use Dependency injection
-        this.messagesService = new MessagesService()
+    constructor(public messagesService: MessagesService) {
+        
     }
 
 
